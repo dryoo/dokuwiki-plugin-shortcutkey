@@ -14,3 +14,4 @@ $conf['key_revisions']  ='I';
 $conf['key_search']     ='S';
 $conf['key_show']       ='V';
 $conf['key_top']        ='T';
+$conf['key_save']       ='Q';

@@ -23,7 +23,7 @@ class action_plugin_shortcutkey extends DokuWiki_Action_Plugin {
      */
     public function handle_dokuwiki_started(Doku_Event &$event, $param) {
         global $JSINFO;
-        $_actions= array('show','edit','backlink','revisions','diff','media','index','recent','search','home','top');
+        $_actions= array('show','edit','backlink','revisions','diff','media','index','recent','search','home','top', 'save');
         $JSINFO['DOKU_URL']=DOKU_URL;
         
         foreach ($_actions as $_a) {

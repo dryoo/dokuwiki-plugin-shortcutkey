@@ -8,6 +8,7 @@
 // keys need to match the config setting name
 $lang['key_home']       = 'Shortcut key to go to dokuwiki root';
 $lang['key_edit']       = 'Shortcut key to edit the current page';
+$lang['key_save']       = 'Shortcut key to save the current page';
 $lang['key_backlink']   = 'Shortcut key to do backlink';
 $lang['key_diff']       = 'Shortcut key to show difference';
 $lang['key_media']      = 'Shortcut key to show media manager';

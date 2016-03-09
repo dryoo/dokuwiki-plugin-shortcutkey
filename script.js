@@ -35,5 +35,7 @@ jQuery(document).keydown(function(e){
                 window.open(uurl +'&do=revisions','_self',false);return false; break;
             case JSINFO['key_index']:
                 window.open(uurl +'&do=index','_self',false);return false; break;
+            case JSINFO['key_save']:
+                document.getElementById('edbtn__save').click();return false; break;
         }
 } });
