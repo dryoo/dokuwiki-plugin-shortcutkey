@@ -4,4 +4,4 @@ email  dryoo@live.com
 date   2014-10-29
 name   shortcutkey plugin
 desc   Add shortcut keys to dokuwiki actions
-url    http://dokuwiki.org/plugin/shorcutkey
+url    http://dokuwiki.org/plugin/shortcutkey
