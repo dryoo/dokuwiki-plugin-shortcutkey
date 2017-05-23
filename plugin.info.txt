@@ -1,7 +1,7 @@
 base   shortcutkey
 author S.C. Yoo
 email  dryoo@live.com
-date   2014-10-29
+date   2017-05-24
 name   shortcutkey plugin
 desc   Add shortcut keys to dokuwiki actions
 url    http://dokuwiki.org/plugin/shortcutkey
