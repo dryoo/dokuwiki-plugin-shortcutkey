@@ -28,7 +28,7 @@ jQuery(document).keydown(function(e){
             case JSINFO['key_recent']:
                  window.open(uurl +'&do=recent','_self',false); return false; break;
             case JSINFO['key_edit']:
-                 window.open(uurl +'&do=edit','_self',false);return false; break; 
+                 window.location = jQuery('#dokuwiki__pagetools .edit a').attr('href'); break;
             case JSINFO['key_search']:
                 document.getElementById('qsearch__in').focus(); return false; break;
             case JSINFO['key_revisions']:
