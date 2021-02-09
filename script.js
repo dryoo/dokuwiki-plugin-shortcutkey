@@ -7,7 +7,7 @@ jQuery(document).keydown(function(e){
     if (window.event) var e=window.event,f=e.srcElement,nn=f.tagName;
         else var f=e.target,nn=f.nodeName;/* GET FOCUS 현재 포커스를 얻음*/
     if (nn!='INPUT'&&nn!='TEXTAREA') {/* In TYPING? 현재 문자입력중이 아닌지 확인*/
-        var uurl=JSINFO['DOKU_URL'] + "?id=" +JSINFO['id']; 
+        var uurl=location.protocol + '//' + location.host + location.pathname + "?id=" +JSINFO['id']; 
         switch (e.which) {
             case JSINFO['key_home']:
                  window.open(JSINFO['DOKU_URL'],'_self',false);return false; break; 
@@ -28,9 +28,11 @@ jQuery(document).keydown(function(e){
             case JSINFO['key_recent']:
                  window.open(uurl +'&do=recent','_self',false); return false; break;
             case JSINFO['key_edit']:
-                 window.open(uurl +'&do=edit','_self',false);return false; break; 
-            case JSINFO['key_search']:
+                 window.open(uurl +'&do=edit','_self',false); return false; break; 
+            case JSINFO['key_search']: {
+				window.open('#dokuwiki__top','_self',false);
                 document.getElementById('qsearch__in').focus(); return false; break;
+			}
             case JSINFO['key_revisions']:
                 window.open(uurl +'&do=revisions','_self',false);return false; break;
             case JSINFO['key_index']:
