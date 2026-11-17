@@ -25,14 +25,30 @@ class action_plugin_shortcutkey extends DokuWiki_Action_Plugin {
         global $JSINFO;
         $_actions= array('show','edit','backlink','revisions','diff','media','index','recent','search','home','top', 'save');
         $JSINFO['DOKU_URL']=DOKU_URL;
-        
+
         foreach ($_actions as $_a) {
-            $JSINFO['key_'.$_a] = (ord($this->getConf('key_'.$_a)));
-        }     
-        if(!plugin_isdisabled('randompage')) {
-            $JSINFO['key_random']=ord($this->getConf('key_random'));
-            $JSINFO['key_nsrandom']=ord($this->getConf('key_nsrandom'));
+            $JSINFO['key_'.$_a] = $this->keycode('key_'.$_a);
         }
+        if(!plugin_isdisabled('randompage')) {
+            $JSINFO['key_random']   = $this->keycode('key_random');
+            $JSINFO['key_nsrandom'] = $this->keycode('key_nsrandom');
+        }
+    }
+
+    /**
+     * Turn a configured key into the numeric value jQuery reports in e.which.
+     * An empty setting returns 0, which no key can match, so the shortcut is
+     * simply disabled.
+     *
+     * @param string $setting name of the config option
+     * @return int
+     */
+    protected function keycode($setting) {
+        $key = trim((string) $this->getConf($setting));
+        if ($key === '') {
+            return 0;
+        }
+        return ord(strtoupper($key[0]));
     }
 }
 
